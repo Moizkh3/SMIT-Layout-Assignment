@@ -1,0 +1,263 @@
+* {
+    padding: 0;
+    margin: 0;
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #413f3b url(images/bg.jpg);
+}
+
+header {
+    background-color: #2d2e26;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.header {
+    width: 912px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+}
+
+.header div {
+    display: flex;
+    align-items: center;
+}
+
+ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 5px;
+    letter-spacing: 1px;
+    list-style: none;
+    font-size: 14.4px;
+    font-family: "Quicksand", sans-serif;
+}
+
+ul li a:hover {
+    color: #ffffff;
+}
+
+header ul li a {
+    color: #b5c1ad;
+    text-decoration: none;
+}
+
+main {
+    width: 992px;
+    margin: 120px auto;
+    margin-bottom: 0px;
+    height: 450px;
+    border-bottom: 1px solid #ffffff;
+}
+
+main .cycle {
+    background-image: url(images/triangles.png);
+    background-repeat: no-repeat;
+    background-position: unset;
+    width: 58%;
+    height: 340px;
+    position: relative;
+    z-index: 100;
+    top: 21px;
+    left: 124px;
+}
+
+main .triangle {
+    background-image: url(images/bg-triangle.png);
+    background-repeat: no-repeat;
+    z-index: -1000;
+    width: 65%;
+    height: 540px;
+    position: relative;
+    bottom: 465px;
+}
+
+main .img-div {
+    width: 100%;
+    position: relative;
+}
+
+.link-div {
+    position: absolute;
+    top: 0;
+    right: 100px;
+    width: 400px;
+    height: 300px;
+}
+
+.link-div a {
+    text-decoration: none;
+    font-size: 35px;
+    text-transform: uppercase;
+    color: #b5c1ad;
+    padding-bottom: 20px;
+    font-family: "Noto Sans Georgian", sans-serif;
+    font-weight: 300;
+}
+
+.link-div a:hover {
+    color: #ffffff;
+}
+
+.paras-div {
+    width: 220px;
+    height: 340px;
+    position: absolute;
+    top: 80px;
+    right: 50px;
+}
+
+.paras-div p {
+    font-size: 14px;
+    margin: 10px 0px;
+    color: #ffffff;
+}
+
+.paras-div .p1 {
+    font-size: 11px;
+    color: #b5c1ad;
+    font-family: "Noto Sans Georgian", sans-serif;
+}
+
+section {
+    width: 992px;
+    color: #b5c1ad;
+    padding: 30px;
+    margin: 0 auto;
+}
+
+section a {
+    color: #b5c1ad;
+    text-decoration: none;
+    font-size: 21.6px;
+    font-family: "Quicksand", sans-serif;
+}
+
+.Article-div {
+    display: flex;
+    justify-content: space-between;
+}
+
+.Article-div article {
+    margin-top: 18px;
+    width: 220px;
+    height: 312px;
+}
+
+.Article-div ul {
+    display: flex;
+    flex-direction: column;
+    font-size: 12px !important;
+
+}
+
+.Article-div ul li p {
+    padding-top:10px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #d3d3d3;
+    text-align: left;
+    word-spacing: 2px;
+}
+
+.p-hover:hover {
+    color: #ffffff !important;
+}
+
+.Article-div ul li .p2 {
+    padding-bottom: 5px;
+    border-bottom: transparent;
+}
+
+footer {
+    width: 100%;
+    height: 50px;
+    background-color:#33322e;
+}
+
+.footer {
+    width: 992px;
+    display: flex;
+    margin: 0 auto;
+    justify-content: end;
+    align-items: center;
+    gap: 4px;
+    height: 100%;
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+.footer p {
+    color: #807c72;
+    font-size: 12px;
+    border-right: 2px solid #d3d3d3;
+    padding-right: 4px;
+}
+
+footer .p3 {
+    border-right: transparent;
+}
+
+.fixed-blinking-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    background-color: #ff0000;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    animation: blink 1s infinite;
+    z-index: 1000;
+}
+
+@keyframes blink {
+    0% { opacity: 1; }
+    50% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .fixed-blinking-button {
+        bottom: 15px;
+        right: 15px;
+        padding: 12px 24px;
+        font-size: 16px;
+        background-color: #ff4444;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+        min-width: 120px;
+    }
+}
+
+@media (max-width: 480px) {
+    .fixed-blinking-button {
+        bottom: 10px;
+        right: 10px;
+        padding: 10px 20px;
+        font-size: 14px;
+        background-color: #ff3333;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+        min-width: 100px;
+        /* Ensure button stays above other elements */
+        z-index: 9999;
+    }
+}
+
+/* Add a new breakpoint for very small devices */
+@media (max-width: 320px) {
+    .fixed-blinking-button {
+        bottom: 5px;
+        right: 5px;
+        padding: 8px 16px;
+        font-size: 12px;
+        min-width: 80px;
+    }
+} 
